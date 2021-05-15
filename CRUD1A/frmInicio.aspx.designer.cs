@@ -33,31 +33,31 @@ namespace CRUD1A
         protected global::System.Web.UI.WebControls.Button ButtonCargaDatos;
 
         /// <summary>
-        /// Control TextBox1.
+        /// Control txtboxID.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox txtboxID;
 
         /// <summary>
-        /// Control Button1.
+        /// Control btnBuscarID.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button btnBuscarID;
 
         /// <summary>
-        /// Control TextBox2.
+        /// Control txtBoxNombre.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox txtBoxNombre;
 
         /// <summary>
         /// Control Button2.
