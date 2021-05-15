@@ -18,7 +18,6 @@ namespace CRUD1A
 
         }
 
-
         private void mostrarPopUp(string mensaje)
         {
             //Muestra un mensaje en el navegador. 
@@ -79,20 +78,37 @@ namespace CRUD1A
         }
 
 
-        protected void btnBuscarID_Click1(object sender, EventArgs e)
+        public DataTable CargarDatosDB(String condicion = "1=1")
         {
-            string id = txtboxID.Text.Trim();
             clsConexion cn = new clsConexion();
             DataTable dt = new DataTable();
+            string sentencia = $"SELECT * FROM tb_alumnos WHERE {condicion}";
 
-            string sentencia = $"SELECT * FROM tb_alumnos WHERE correlativo = {id}";
 
             dt = cn.consultaTablaDirecta(sentencia);
 
-            if (dt.Rows.Count > 0)
+
+            return dt;
+        }
+
+
+
+        protected void btnBuscarID_Click1(object sender, EventArgs e)
+        {
+            string id = txtboxID.Text.Trim();
+            string condicion = $"correlativo = {id}";
+
+            DataTable dataID = CargarDatosDB(condicion);
+
+            if (dataID.Rows.Count > 0)
             {
-                string nombre = dt.Rows[0].Field<string>("nombre");
+                string nombre = dataID.Rows[0].Field<string>("nombre");
                 txtBoxNombre.Text = nombre;
+            }
+            else
+            {
+                mostrarPopUp("Vuelve a intentarlo.");
+                txtBoxNombre.Text = "No se han encontrado resultados.";
             }
         }
 
@@ -102,6 +118,27 @@ namespace CRUD1A
         protected void btnBuscarID_Click(object sender, EventArgs e)
         {
             //sin Uso
+        }
+
+        protected void btnBuscarNombre_Click(object sender, EventArgs e)
+        {
+            string nombre = txtBoxNombre.Text.Trim();
+            string condicion = $"nombre like ('%{nombre}%')";
+
+
+            DataTable dataNombre = CargarDatosDB(condicion);
+
+
+            if (dataNombre.Rows.Count > 0)
+            {
+                int id = dataNombre.Rows[0].Field<int>("correlativo");
+                txtboxID.Text = id.ToString();
+            }
+            else
+            {
+                mostrarPopUp("Vuelve a intentarlo.");
+                txtBoxNombre.Text = "No se han encontrado resultados.";
+            }
         }
     }
 }

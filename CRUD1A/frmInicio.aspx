@@ -9,7 +9,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div style="height: 193px">
+        <div style="height: 386px">
             <br />
             <br />
             <asp:Button ID="ButtonCargaDatos" runat="server" OnClick="ButtonCargaDatos_Click" Text="Cargar Datos A DB" />
@@ -21,7 +21,9 @@
             <br />
             <br />
             <asp:TextBox ID="txtBoxNombre" runat="server" Width="427px"></asp:TextBox>
-            <asp:Button ID="Button2" runat="server" Text="Button" Width="119px" />
+            <asp:Button ID="btnBuscarNombre" runat="server" OnClick="btnBuscarNombre_Click" Text="Buscar por Nombre" Width="179px" />
+            <br />
+            <br />
         </div>
     </form>
 </body>
