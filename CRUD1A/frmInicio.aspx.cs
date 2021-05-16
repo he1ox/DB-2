@@ -114,7 +114,6 @@ namespace CRUD1A
 
 
 
-
         protected void btnBuscarID_Click(object sender, EventArgs e)
         {
             //sin Uso
@@ -125,6 +124,7 @@ namespace CRUD1A
             string nombre = txtBoxNombre.Text.Trim();
             string condicion = $"nombre like ('%{nombre}%')";
 
+            nombre.Replace("","%");
 
             DataTable dataNombre = CargarDatosDB(condicion);
 
@@ -139,6 +139,12 @@ namespace CRUD1A
                 mostrarPopUp("Vuelve a intentarlo.");
                 txtBoxNombre.Text = "No se han encontrado resultados.";
             }
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            //PASAR A OTRA PANTALLA.
+            Response.Redirect("/formMYSQL.aspx");
         }
     }
 }

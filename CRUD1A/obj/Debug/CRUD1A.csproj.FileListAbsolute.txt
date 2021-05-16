@@ -150,3 +150,17 @@ C:\Users\georg\source\repos\CRUD1A\DB-2\CRUD1A\obj\Debug\CRUD1A.csproj.CoreCompi
 C:\Users\georg\source\repos\CRUD1A\DB-2\CRUD1A\obj\Debug\CRUD1A.csproj.CopyComplete
 C:\Users\georg\source\repos\CRUD1A\DB-2\CRUD1A\obj\Debug\CRUD1A.dll
 C:\Users\georg\source\repos\CRUD1A\DB-2\CRUD1A\obj\Debug\CRUD1A.pdb
+C:\Users\georg\source\repos\CRUD1A\DB-2\CRUD1A\bin\MySql.Data.dll
+C:\Users\georg\source\repos\CRUD1A\DB-2\CRUD1A\bin\Google.Protobuf.dll
+C:\Users\georg\source\repos\CRUD1A\DB-2\CRUD1A\bin\Zstandard.Net.dll
+C:\Users\georg\source\repos\CRUD1A\DB-2\CRUD1A\bin\K4os.Compression.LZ4.Streams.dll
+C:\Users\georg\source\repos\CRUD1A\DB-2\CRUD1A\bin\BouncyCastle.Crypto.dll
+C:\Users\georg\source\repos\CRUD1A\DB-2\CRUD1A\bin\Ubiety.Dns.Core.dll
+C:\Users\georg\source\repos\CRUD1A\DB-2\CRUD1A\bin\Renci.SshNet.dll
+C:\Users\georg\source\repos\CRUD1A\DB-2\CRUD1A\bin\System.Buffers.dll
+C:\Users\georg\source\repos\CRUD1A\DB-2\CRUD1A\bin\K4os.Compression.LZ4.dll
+C:\Users\georg\source\repos\CRUD1A\DB-2\CRUD1A\bin\K4os.Hash.xxHash.dll
+C:\Users\georg\source\repos\CRUD1A\DB-2\CRUD1A\bin\System.Memory.dll
+C:\Users\georg\source\repos\CRUD1A\DB-2\CRUD1A\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\georg\source\repos\CRUD1A\DB-2\CRUD1A\bin\System.Numerics.Vectors.dll
+C:\Users\georg\source\repos\CRUD1A\DB-2\CRUD1A\bin\MySql.Data.xml
