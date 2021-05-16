@@ -1,4 +1,4 @@
-![image](![image](https://user-images.githubusercontent.com/68780219/118384836-bfbe3d80-b5c6-11eb-8a57-569e0c1fbe60.png))
+![image](https://github.com/he1ox/DB-2/blob/master/net.jpg)
 
 # CONEXION A BASES DE DATOS EN ASP.NET 🚀
 
