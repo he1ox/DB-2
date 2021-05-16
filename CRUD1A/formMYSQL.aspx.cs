@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -50,6 +51,60 @@ namespace CRUD1A
         }
 
 
+        protected void btnBuscarID_Click(object sender, EventArgs e)
+        {
+            string id = txtBoxID.Text.Trim();
+            string condicion = $"correlativo = {id}";
+
+            DataTable dataID = CargarDatosDB(condicion);
+
+            if (dataID.Rows.Count > 0)
+            {
+                string nombre = dataID.Rows[0].Field<string>("nombre");
+                txtBoxNombre.Text = nombre;
+            }
+            else
+            {
+                mostrarPopUp("Vuelve a intentarlo.");
+                txtBoxNombre.Text = "No se han encontrado resultados.";
+            }
+        }
+
+
+        protected void btnBuscarNombre_Click(object sender, EventArgs e)
+        {
+            string nombre = txtBoxNombre.Text.Trim();
+            string condicion = $"nombre like ('%{nombre}%')";
+
+
+            DataTable dataNombre = CargarDatosDB(condicion);
+
+
+            if (dataNombre.Rows.Count > 0)
+            {
+                int id = dataNombre.Rows[0].Field<int>("correlativo");
+                txtBoxID.Text = id.ToString();
+            }
+            else
+            {
+                mostrarPopUp("Vuelve a intentarlo.");
+                txtBoxNombre.Text = "No se han encontrado resultados.";
+            }
+        }
+
+
+        protected void btnEliminarDatos_Click(object sender, EventArgs e)
+        {
+            string sentencia = "DELETE FROM tb_alumnos";
+            sqlconexion.EjecutaSQLDirecto(sentencia);
+            mostrarPopUp("Datos eliminados.");
+            this.btnEliminarDatos.Visible = false;
+        }
+
+
+
+        //Espacio para funciones
+
         private void mostrarPopUp(string mensaje)
         {
             //Muestra un mensaje en el navegador. 
@@ -92,11 +147,25 @@ namespace CRUD1A
 
         }
 
-        protected void btnEliminarDatos_Click(object sender, EventArgs e)
+
+        
+
+
+
+        public DataTable CargarDatosDB(String condicion = "1=1")
         {
-            string sentencia = "DELETE FROM tb_alumnos";
-            sqlconexion.EjecutaSQLDirecto(sentencia);
-            mostrarPopUp("Datos eliminados.");
+            DataTable dt = new DataTable();
+            string sentencia = $"SELECT * FROM tb_alumnos WHERE {condicion}";
+
+            dt = sqlconexion.consultaTablaDirecta(sentencia);
+
+            return dt;
         }
+
+        
+
+        //End Funciones
+
+
     }
 }

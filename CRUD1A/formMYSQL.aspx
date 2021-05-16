@@ -22,13 +22,16 @@
             <br />
             <asp:Label ID="Label2" runat="server" Text="Realizar Busqueda por ID:"></asp:Label>
 &nbsp;<br />
-            <asp:TextBox ID="TextBox1" runat="server" Width="151px"></asp:TextBox>
+            <asp:TextBox ID="txtBoxID" runat="server" Width="151px"></asp:TextBox>
+            <asp:Button ID="btnBuscarID" runat="server" OnClick="btnBuscarID_Click" Text="Buscar ID" Width="113px" />
             <br />
             <br />
             <br />
             <asp:Label ID="Label3" runat="server" Text="Realizar Busqueda por Nombre:"></asp:Label>
             <br />
-            <asp:TextBox ID="TextBox2" runat="server" Width="380px"></asp:TextBox>
+            <asp:TextBox ID="txtBoxNombre" runat="server" Width="380px"></asp:TextBox>
+            <asp:Button ID="btnBuscarNombre" runat="server" OnClick="btnBuscarNombre_Click" Text="Buscar Nombre" />
+            <br />
             <br />
             <br />
             <asp:Button ID="btnProbarBD" runat="server" OnClick="btnProbarBD_Click" Text="Probar Conexion" Width="155px" />

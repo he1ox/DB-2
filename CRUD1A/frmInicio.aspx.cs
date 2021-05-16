@@ -124,7 +124,6 @@ namespace CRUD1A
             string nombre = txtBoxNombre.Text.Trim();
             string condicion = $"nombre like ('%{nombre}%')";
 
-            nombre.Replace("","%");
 
             DataTable dataNombre = CargarDatosDB(condicion);
 
